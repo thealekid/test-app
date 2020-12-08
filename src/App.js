@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
+import ProductContainer from './components/ProductContainer';
+
+const API = "https://raw.githubusercontent.com/thealekid/kelisto-frontend-js-challenge/master/data/products.json"
+
+class App extends Component {
+
+  state = {
+    products: []
+  }
+
+  componentDidMount(){
+    fetch(API)
+    .then(res => res.json())
+    .then(data => this.setState({
+      products: data
+    }))
+  }
+
+  // renderProducts = () => {
+  //   return this.state.products.map(product => <img src={product.image}/>)
+  // } 
+
+  render() {
+    // if (this.state.products != null) {
+    //   return (
+    //     <div>
+    //       {this.renderProducts()}
+    //     </div>
+    //   )
+    // }
+    return(
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProductContainer products={this.state.products}/>
     </div>
-  );
+
+    )
+  };
 }
 
 export default App;
