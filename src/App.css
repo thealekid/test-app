@@ -1,38 +1,132 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  font-family: "Avenir";
+  justify-content: space-between;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.desc-div {
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
 }
+
+.product-card {
+  border: 1px solid #d3d3d3;
+  border-radius: .25rem;
+  padding: 15px;
+}
+
+
+
+.product-box{
+    display: flex;
+    align-items: center;
+
+}
+
+.image-detail {
+  background-size: cover;
+  min-height: 180px;
+  background-position: center;
+  background-color: white;
+}
+
+.product-content {
+  padding: 15px;
+  width: 200px;
+}
+.product-content h4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.home-button{
+  display: inline-block;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: "Avenir";
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  padding: 18px 80px 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(199, 20, 190, 0.8), rgba(230, 59, 215, 0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(219, 61, 219, 0.3);
+}
+
+.home-button:hover{
+  color: #fff;
+  border: 1px solid rgba(212, 67, 231, 0.151);
+  color: black;
+  background-position: 99% 50%;
+}
+
+.basket-button{
+  display: inline-block;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: "Avenir";
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  padding: 18px 80px 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(199, 20, 190, 0.8), rgba(230, 59, 215, 0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(219, 61, 219, 0.3);
+}
+
+.basket-button:hover{
+  color: #fff;
+  border: 1px solid rgba(212, 67, 231, 0.151);
+  color: black;
+  background-position: 99% 50%;
+}
+
+.go-button {
+  display: inline-block;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: "Avenir";
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  padding: 18px 80px 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(199, 20, 190, 0.8), rgba(230, 59, 215, 0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(219, 61, 219, 0.3);
+}
+
+.go-button:hover{
+  color: #fff;
+  border: 1px solid rgba(212, 67, 231, 0.151);
+  color: black;
+  background-position: 99% 50%;
+}
+
+
