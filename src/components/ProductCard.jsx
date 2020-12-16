@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import "../App.css";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+
 
 class ProductCard extends Component {
 
