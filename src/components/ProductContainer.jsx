@@ -9,6 +9,8 @@ class ProductContainer extends Component {
             return (
                 <div className="product-list">
                     <ProductCard selectedItem={this.props.selectedItem} homePage={this.props.removeItem} isAdding={true} product={this.props.selectedItem} handleClick={this.props.addToCart}/> 
+                    <h2>Product Description</h2>
+                <p className="desc">{this.props.selectedItem.description}</p>
                 </div>
             )
         }
@@ -21,8 +23,6 @@ class ProductContainer extends Component {
             <div className="product-collection">
                 {this.displayItem()}
                 <div className="desc-div">
-                    <h2>Product Description</h2>
-                <p className="desc">{this.props.selectedItem.description}</p>
                 </div>
             </div>
         )

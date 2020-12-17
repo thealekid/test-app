@@ -24,7 +24,7 @@ class ProductCard extends Component {
         this.setState(prevState => {
             if(prevState.quantity > 0){
                 return {
-                    quantity: prevState.quantity -1 
+                    quantity: prevState.quantity - 1 
                 }
                 } else {
                     return null;
@@ -34,6 +34,14 @@ class ProductCard extends Component {
 
     handleQuantityChange = (event) => {
         this.setState({quantity : event.target.value})
+    }
+
+    componentDidMount(){
+        if(this.props.product.quantity !== undefined){
+            this.setState({
+                quantity: this.props.product.quantity
+            })
+        }
     }
 
     render() {
@@ -54,7 +62,7 @@ class ProductCard extends Component {
                 </div>
                     </div>
                     {this.props.selectedItem.title ? <button className="go-button" onClick={() => this.props.homePage()}>Go Back</button> : null }
-                <button className="basket-button" onClick={() => this.props.handleClick(this.props.product)}>{this.props.isAdding ? "Add To Basket" : "Remove From Basket"}</button>
+                <button className="basket-button" onClick={() => this.props.handleClick(this.props.product, this.state.quantity)}>{this.props.isAdding ? "Add To Basket" : "Remove From Basket"}</button>
             </div>
         )
     }
