@@ -61,8 +61,12 @@ class ProductCard extends Component {
                 </div>
                 </div>
                     </div>
-                    {this.props.selectedItem.title ? <button className="go-button" onClick={() => this.props.homePage()}>Go Back</button> : null }
-                <button className="basket-button" onClick={() => this.props.handleClick(this.props.product, this.state.quantity)}>{this.props.isAdding ? "Add To Basket" : "Remove From Basket"}</button>
+                    {this.props.selectedItem.title ? 
+                    <button className="go-button" onClick={() => this.props.homePage()}>
+                        Go Back
+                    </button> : null }
+                    <button className="basket-button" onClick={() => this.props.handleClick(this.props.product, this.state.quantity)}>
+                    {this.props.isAdding ? "Add To Basket" : "Remove From Basket"}</button>
             </div>
         )
     }
