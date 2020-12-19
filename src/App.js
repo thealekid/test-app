@@ -84,6 +84,7 @@ class App extends Component {
               removeItem={this.removeSelectedItem}
               handleClick={this.removeFromCart}
               selectedItem={this.state.selectedItem}
+              
             />
           </Route>
           <Redirect to="/" />

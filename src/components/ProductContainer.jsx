@@ -8,14 +8,14 @@ class ProductContainer extends Component {
         if (this.props.selectedItem.description){
             return (
                 <div className="product-list">
-                    <ProductCard selectedItem={this.props.selectedItem} homePage={this.props.removeItem} isAdding={true} product={this.props.selectedItem} handleClick={this.props.addToCart}/> 
+                    <ProductCard selectedItem={this.props.selectedItem} homePage={this.props.removeItem} inBasket={false} product={this.props.selectedItem} handleClick={this.props.addToCart}/> 
                     <h2>Product Description</h2>
                 <p className="desc">{this.props.selectedItem.description}</p>
                 </div>
             )
         }
 
-        return this.props.products.map(product => <ProductCard selectedItem={this.props.selectedItem} isAdding={true} key={product.id} product={product} handleClick={this.props.selectItem}/> )
+        return this.props.products.map(product => <ProductCard selectedItem={this.props.selectedItem} inBasket={false} key={product.id} product={product} handleClick={this.props.selectItem}/> )
     }
 
     render(){
